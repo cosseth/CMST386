@@ -12,7 +12,7 @@ h1 {
     margin-bottom: 0.5em;
 }
 h2, h3 {
-    margin: 10px 20px;;
+    margin: 20px 20px 10px 20px;
     padding: 0;
     font-size: 2em;
     color: #e5e5e5;
@@ -21,7 +21,7 @@ h2, h3 {
 p {
     color: #ffffff;
     text-align: center;
-    margin: 0px 20px;
+    margin: 0px 20px 20px 20px;
     max-width: 85ch;
     overflow-wrap: break-word;
 }
@@ -42,10 +42,10 @@ p {
     margin: 20px 0;
     border-radius: 3px;
 }
-section {
+section.gallery {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
