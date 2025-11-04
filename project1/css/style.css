@@ -92,6 +92,8 @@ ul li a {
   padding: 14px 16px;
   text-decoration: none;
   background-color: #fca311;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 ul li .dropdown {
@@ -114,6 +116,8 @@ ul li:hover .dropdown {
   text-align: left;
   background-color: #fca311;
   color: #14213d;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .dropdown li a:hover {
@@ -130,11 +134,11 @@ ol {
 footer {
   text-align: center;
   font-style: italic;
-  padding: 10px 0; /* top and bottom padding */
+  padding: 10px 0; 
   background-color: white;
   color: #14213d;
   position: fixed;
   width: 100%;
   bottom: 0;
-  z-index: 1000; /* ensures it's above other elements */
+  z-index: 1000; 
 }
