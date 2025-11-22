@@ -1,9 +1,10 @@
 @background-color: #001d3d; 
 @font-family: Open Sans, sans-serif;
-@color-contrast: #f4effa;
+@color-contrast: #fff1d0;
 @button-text: #001233;
 @startColor: #a9d6e5;
 @endColor: #00b4d8;
+@headings: #ead2ac;
 
 .gradient(@startColor, @endColor) {
   background: linear-gradient(to right, @startColor, @endColor);
@@ -16,6 +17,23 @@ body {
   text-align: center;
   margin: 30px;
 }
+h1 {
+  font-size: 2.7em;
+  margin-bottom: 10px;
+  color: @headings;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: @headings;
+}
+
+h3 {
+  font-size: 1.6em;
+  margin-bottom: 8px;
+  color: darken(@startColor, 20%);
+}
 
 .btn-preprocessor {
   padding: 10px 20px;
@@ -26,19 +44,58 @@ body {
   text-decoration: none;
   font-family: @font-family;
   font-weight: bold;
+  font-size: 1em;
   display: inline-block;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 
 
   &:hover,
-  &:active,
-  &:visited,
-  &:link {
-    color: @button-text !important; 
+  &:active {
+    background: linear-gradient(to right, @endColor, @startColor);
+    color: #ffffff !important; 
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);} 
+}
+nav {
+  background: linear-gradient(to right, @startColor, @endColor);
+  padding: 15px 0;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  margin: 0;
+  text-decoration: none;  
+  color: @button-text !important;   
+  font-family: @font-family;
+  font-weight: bold;
+  font-size: large;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    color: #ffffff !important;  
+    background: rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   }
+
 }
 
 footer {  
-  margin-top: 50px;
+  margin-top: 30px;
   font-size: 0.8em;
 }
