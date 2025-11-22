@@ -1,0 +1,44 @@
+@background-color: #001d3d; 
+@font-family: Open Sans, sans-serif;
+@color-contrast: #f4effa;
+@button-text: #001233;
+@startColor: #a9d6e5;
+@endColor: #00b4d8;
+
+.gradient(@startColor, @endColor) {
+  background: linear-gradient(to right, @startColor, @endColor);
+}
+
+body {
+  background-color: @background-color;
+  color: @color-contrast;
+  font-family: @font-family;
+  text-align: center;
+  margin: 30px;
+}
+
+.btn-preprocessor {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 30px;
+  background: linear-gradient(to right, @startColor, @endColor);
+  color: @button-text !important;  
+  text-decoration: none;
+  font-family: @font-family;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:link {
+    color: @button-text !important; 
+  }
+}
+
+footer {  
+  margin-top: 50px;
+  font-size: 0.8em;
+}
