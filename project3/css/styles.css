@@ -1,9 +1,16 @@
 body {
   background-color: #001d3d;
   color: #fff1d0;
-  font-family: Open Sans, sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   margin: 30px;
+}
+p {
+  max-width: 85ch;
+  line-break: 1.6;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  text-align: justify;
 }
 h1 {
   font-size: 2.7em;
@@ -14,9 +21,11 @@ h2 {
   font-size: 2.2em;
   margin-bottom: 15px;
   color: #ead2ac;
+  text-transform: titlecase;
 }
 h3 {
   font-size: 1.6em;
+  text-transform: titlecase;
   margin-bottom: 8px;
   color: #5bb1cd;
 }
@@ -27,7 +36,7 @@ h3 {
   background: linear-gradient(to right, #a9d6e5, #00b4d8);
   color: #001233 !important;
   text-decoration: none;
-  font-family: Open Sans, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 1em;
   display: inline-block;
@@ -60,7 +69,7 @@ nav ul li a {
   margin: 0;
   text-decoration: none;
   color: #001233 !important;
-  font-family: Open Sans, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: large;
   text-transform: uppercase;
@@ -76,5 +85,5 @@ nav ul li a:hover {
 }
 footer {
   margin-top: 30px;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }

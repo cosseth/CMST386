@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta name="keywords" content="CMST 386, Nathalie Alvarez, web design projects, HTML and CSS, University of Maryland Global Campus, UMGC, student portfolio, SEO best practices, accessibility, user engagement, web development, digital design, project showcase">
+    <meta name="description" content="This is the main index page for Nathalie Alvarez's CMST 386 course projects at University of Maryland Global Campus. Explore four web design projects demonstrating HTML and CSS skills, including SEO best practices, accessibility, and user engagement.">
+    <title>CSS Preprocessing</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>CMST 386 - Nathalie Alvarez</h1>
+
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="home.html">Project 3</a></li>
+        </ul>
+      </nav>
+    </header>  
+    <main>
+      <section>
+        <h2>Preprocessing CSS</h2>
+        <h3>Ways to Implement Preprocessing (Client-side vs Server-side)</h3>
+        <p>
+            Client-side preprocessing is executed in the user’s browser using JavaScript, while server-side preprocessing occurs on the server before the content reaches the client. Client-side preprocessing may be more suitable for development, testing, and iteration speed, allowing flexible updates without reloading the page. On the other hand, server-side preprocessing is ideal for prioritizing search engine optimization and performance, since the content is pre-rendered rather than processed in the browser, and it provides consistency across devices.
+        </p>
+        <h3>Mechanisms used in Preprocessor LESS (Learner Style Sheets)</h3>
+        <p>
+            Preprocessors such as LESS or SASS make the coding process more flexible and manageable, reduce development time, and maintain a consistent structure that allows for seamless updates in the future. Unlike plain CSS, which does not support variables, functions, mixins, operators, or nesting, preprocessors provide these advanced features and then compile them into standard CSS. This process enables designers to adapt design properties across multiple elements at once.        </p>
+        <p>
+            For example, with LESS, we can define variables for colors or other properties and apply them to different elements, classes, selectors, or IDs. If the variable value changes, the update is automatically applied everywhere it is used, eliminating the need to manually edit each instance. Functions are another powerful feature, allowing repetitive actions to be handled consistently and efficiently. They can be used for tasks such as calculating spacing, managing color schemes, or performing other logic-driven styling.        </p>
+        <p>
+            Operations further enhance flexibility by enabling dynamic calculations, such as adjusting widths or heights using mathematical operators (+, −, *, /) or percentages. Finally, nesting allows rules to be placed inside other rules, creating a cleaner and more intuitive structure. For instance, instead of defining styles for ul and li separately, LESS allows nesting so related styles are grouped together, including states like :hover or .active.
+        </p>
+        </section>
+    </main>
+
+    <footer>
+      <small>2025. Nathalie Alvarez</small>
+    </footer>
+  </body>
+</html>

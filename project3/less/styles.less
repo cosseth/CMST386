@@ -1,5 +1,5 @@
 @background-color: #001d3d; 
-@font-family: Open Sans, sans-serif;
+@font-family: "Open Sans", sans-serif;
 @color-contrast: #fff1d0;
 @button-text: #001233;
 @startColor: #a9d6e5;
@@ -17,6 +17,13 @@ body {
   text-align: center;
   margin: 30px;
 }
+p {
+  max-width: 85ch;
+  line-break: 1.6;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  text-align: justify;
+}
 h1 {
   font-size: 2.7em;
   margin-bottom: 10px;
@@ -27,10 +34,12 @@ h2 {
   font-size: 2.2em;
   margin-bottom: 15px;
   color: @headings;
+  text-transform:titlecase;
 }
 
 h3 {
   font-size: 1.6em;
+  text-transform: titlecase;
   margin-bottom: 8px;
   color: darken(@startColor, 20%);
 }
@@ -97,5 +106,5 @@ nav ul li a {
 
 footer {  
   margin-top: 30px;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
