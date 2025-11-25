@@ -48,37 +48,53 @@ h3 {
   color: #ffffff !important;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
 }
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2em;
-  color: #001233;
-  cursor: pointer;
-  padding: 5px 10px;
-}
-.menu-toggle:hover {
-  color: #000000;
-}
-nav {
-  background: linear-gradient(to right, #a9d6e5, #00b4d8);
-  padding: 15px 0;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+header .header-top {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
-nav ul li {
-  display: inline-block;
-}
-nav ul li a {
+header h1 {
+  font-size: 2.7em;
   margin: 0;
+  color: #ead2ac;
+}
+header nav {
+  position: relative;
+}
+header nav .menu-toggle {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: none;
+  color: #a9d6e5;
+  font-size: 2em;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+header nav .menu-toggle:hover {
+  color: white;
+}
+header nav ul {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(to right, #a9d6e5, #00b4d8);
+  padding: 15px;
+  border-radius: 12px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 100;
+}
+header nav ul.open {
+  display: flex;
+}
+header nav ul li a {
+  display: block;
   text-decoration: none;
   color: #001233 !important;
   font-family: "Open Sans", sans-serif;
@@ -88,14 +104,13 @@ nav ul li a {
   padding: 10px 15px;
   border-radius: 8px;
   transition: all 0.3s ease;
-  position: relative;
 }
-nav ul li a:hover {
+header nav ul li a:hover {
   color: #ffffff !important;
   background: rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
-ul.breadcrumb {
+header ul.breadcrumb {
   padding: 10px 20px;
   list-style: none;
   background-color: #9AC3C2;
@@ -103,21 +118,20 @@ ul.breadcrumb {
   border-radius: 12px;
   margin: 0;
 }
-ul.breadcrumb li {
+header ul.breadcrumb li {
   display: inline;
   font-size: 18px;
 }
-ul.breadcrumb li + li:before {
+header ul.breadcrumb li + li:before {
   padding: 8px;
   color: #001d3d;
   content: "/\00a0";
 }
-ul.breadcrumb li a {
+header ul.breadcrumb li a {
   color: #001d3d;
   text-decoration: none;
 }
-ul.breadcrumb li a:hover {
-  color: #001d3d;
+header ul.breadcrumb li a:hover {
   font-weight: bold;
 }
 footer {
@@ -144,10 +158,6 @@ footer {
   h3 {
     font-size: 1.4em;
   }
-  nav ul {
-    flex-direction: column;
-    gap: 12px;
-  }
   p {
     max-width: 90%;
     font-size: 1em;
@@ -156,27 +166,11 @@ footer {
     font-size: 0.95em;
     padding: 8px 18px;
   }
-}
-
-@media (max-width: 600px) {
   .menu-toggle {
-    display: block;
-    margin-bottom: 10px;
+    display: inline-block;
   }
-  nav ul {
-    display: none;
-
-    flex-direction: column;
-    gap: 10px;
-
-    background: linear-gradient(to right, #a9d6e5, #00b4d8);
-    padding: 15px;
-    border-radius: 12px;
-  }
-
-  nav ul.open {
-    display: flex;
-  }
+}
+@media (max-width: 600px) {
   body {
     margin: 15px;
     text-align: left;
@@ -184,10 +178,6 @@ footer {
   h1 {
     font-size: 1.9em;
     text-align: center;
-  }
-  .breadcrumb {
-    text-align: left;
-    font-size: 0.9em;
   }
   p {
     max-width: 100%;
@@ -197,5 +187,49 @@ footer {
     width: 100%;
     padding: 12px 0;
     font-size: 1em;
+  }
+  .menu-toggle {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: none;
+    font-size: 2em;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(to right, #a9d6e5, #00b4d8);
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+    right: 0;
+    list-style-type: none;
+    top: 100%;
+    z-index: 1;
+  }
+  nav ul.open {
+    display: flex;
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 993px) {
+  .menu-toggle {
+    display: inline-block;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(to right, #a9d6e5, #00b4d8);
+    padding: 15px;
+    border-radius: 12px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+  nav ul.open {
+    display: flex;
   }
 }
