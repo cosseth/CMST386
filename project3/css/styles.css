@@ -175,6 +175,10 @@ footer {
     margin: 15px;
     text-align: left;
   }
+  h2,
+  h3 {
+    text-align: center;
+  }
   h1 {
     font-size: 1.9em;
     text-align: center;
@@ -212,6 +216,9 @@ footer {
     position: static;
     width: 100%;
     margin-top: 10px;
+  }
+  footer {
+    text-align: center;
   }
 }
 @media (min-width: 993px) {
