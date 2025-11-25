@@ -29,6 +29,30 @@ h3 {
   margin-bottom: 8px;
   color: #5bb1cd;
 }
+#example {
+  color: #a5f0ff;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#example a {
+  color: inherit;
+  text-decoration: inherit;
+}
+#example a:hover {
+  color: #ffffff;
+}
+#reference {
+  color: #82c3d9 !important;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+#reference:hover {
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
 .btn-preprocessor {
   padding: 10px 20px;
   border: 0;
