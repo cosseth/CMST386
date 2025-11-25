@@ -21,11 +21,11 @@ h2 {
   font-size: 2.2em;
   margin-bottom: 15px;
   color: #ead2ac;
-  text-transform: titlecase;
+  text-transform: capitalize;
 }
 h3 {
   font-size: 1.6em;
-  text-transform: titlecase;
+  text-transform: capitalize;
   margin-bottom: 8px;
   color: #5bb1cd;
 }
