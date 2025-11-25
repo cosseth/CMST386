@@ -64,6 +64,19 @@ h3 {
     color: #ffffff !important; 
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);} 
 }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: @button-text;
+  cursor: pointer;
+  padding: 5px 10px;
+
+  &:hover {
+    color: darken(@button-text, 20%);
+  }
+}
 nav {
   background: linear-gradient(to right, @startColor, @endColor);
   padding: 15px 0;
@@ -142,4 +155,108 @@ footer {
 }
 .back-to-top:hover {
   text-decoration: underline;
+}
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  p {
+    max-width: 90%;
+    font-size: 1em;
+  }
+
+  .btn-preprocessor {
+    font-size: 0.95em;
+    padding: 8px 18px;
+  }
+}
+
+
+/* Phone Styles (≈600px and below) */
+@media (max-width: 600px) {
+  /* Hamburger button with gradient behind it */
+  .menu-toggle {
+    display: inline-block;        /* keeps it only as wide as content */
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    background: linear-gradient(to right, @startColor, @endColor); /* behind button only */
+    color: @button-text;
+    font-size: 2em;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(to right, @endColor, @startColor);
+    }
+  }
+
+  /* Menu items hidden by default */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: none; /* no background when closed */
+    padding: 0;
+    margin-top: 10px; /* add spacing from button */
+    border-radius: 12px;
+    width: auto;      /* don't stretch full width */
+  }
+
+  /* Menu appears when open */
+  nav ul.open {
+    display: flex;
+    background: linear-gradient(to right, @startColor, @endColor); /* optional */
+    padding: 15px;
+    width: auto;      /* menu only as wide as content */
+  }
+
+
+  /* Body adjustments */
+  body {
+    margin: 15px;
+    text-align: left;
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 1.9em;
+    text-align: center;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    text-align: left;
+    font-size: 0.9em;
+  }
+
+  /* Paragraphs */
+  p {
+    max-width: 100%;
+    font-size: 0.95em;
+  }
+
+  /* Button */
+  .btn-preprocessor {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1em;
+  }
+
 }
