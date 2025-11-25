@@ -1,4 +1,4 @@
-@background-color: #001d3d; 
+@background-color: #001d3d;
 @font-family: "Open Sans", sans-serif;
 @color-contrast: #fff1d0;
 @button-text: #001233;
@@ -6,9 +6,11 @@
 @endColor: #00b4d8;
 @headings: #ead2ac;
 
+
 .gradient(@startColor, @endColor) {
   background: linear-gradient(to right, @startColor, @endColor);
 }
+
 
 body {
   background-color: @background-color;
@@ -17,13 +19,15 @@ body {
   text-align: center;
   margin: 30px;
 }
+
 p {
   max-width: 70ch;
-  line-break: 1.6;
+  line-height: 1.6;
   margin: 0 auto;
   padding-bottom: 15px;
   text-align: justify;
 }
+
 h1 {
   font-size: 2.7em;
   margin-bottom: 10px;
@@ -34,7 +38,7 @@ h2 {
   font-size: 2.2em;
   margin-bottom: 15px;
   color: @headings;
-  text-transform:titlecase;
+  text-transform: titlecase;
 }
 
 h3 {
@@ -57,106 +61,142 @@ h3 {
   display: inline-block;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 
-
   &:hover,
   &:active {
     background: linear-gradient(to right, @endColor, @startColor);
     color: #ffffff !important; 
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);} 
-}
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2em;
-  color: @button-text;
-  cursor: pointer;
-  padding: 5px 10px;
-
-  &:hover {
-    color: darken(@button-text, 20%);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
   }
 }
-nav {
-  background: linear-gradient(to right, @startColor, @endColor);
-  padding: 15px 0;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
 
-nav ul li {
-  display: inline-block;
-}
 
-nav ul li a {
-  margin: 0;
-  text-decoration: none;  
-  color: @button-text !important;   
-  font-family: @font-family;
-  font-weight: bold;
-  font-size: large;
-  text-transform: uppercase;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  position: relative;
+header {
 
-  &:hover {
-    color: #ffffff !important;  
-    background: rgba(0, 0, 0, 0.2); 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  .header-top {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;         
+    flex-wrap: wrap;    
+    margin-bottom: 10px;
   }
 
+  h1 {
+    font-size: 2.7em;
+    margin: 0;
+    color: @headings;
+  }
+
+  nav {
+    position: relative;
+
+    
+    .menu-toggle {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: none; 
+      color: @startColor;
+      font-size: 2em;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: white;
+      }
+    }
+
+  
+    ul {
+      display: none;              
+      flex-direction: column;
+      gap: 10px;
+      background: linear-gradient(to right, @startColor, @endColor);
+      padding: 15px;
+      border-radius: 12px;
+      position: absolute;
+      right: 0;
+      top: 100%;                      
+      z-index: 100;
+    }
+
+    ul.open {
+      display: flex;
+    }
+
+    ul li a {
+      display: block;
+      text-decoration: none;
+      color: @button-text !important;
+      font-family: @font-family;
+      font-weight: bold;
+      font-size: large;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #ffffff !important;
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      }
+    }
+  }
+
+
+  ul.breadcrumb {
+    padding: 10px 20px;
+    list-style: none;
+    background-color: #9AC3C2;
+    text-align: left;
+    border-radius: 12px;
+    margin: 0;
+  }
+
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: @background-color;
+    content: "/\00a0";
+  }
+
+  ul.breadcrumb li a {
+    color: @background-color;
+    text-decoration: none;
+  }
+
+  ul.breadcrumb li a:hover {
+    font-weight: bold;
+  }
 }
-ul.breadcrumb {
-  padding: 10px 20px;
-  list-style: none;
-  background-color: #9AC3C2;
-  text-align: left;
-  border-radius: 12px;
-  margin: 0;
-}
-ul.breadcrumb li {
-  display: inline;
-  font-size: 18px;
-}
-ul.breadcrumb li+li:before {
-  padding: 8px;
-  color: @background-color;
-  content: "/\00a0";
-}
-ul.breadcrumb li a {
-  color: @background-color;
-  text-decoration: none;
-}
-ul.breadcrumb li a:hover {
-  color: @background-color;
-  font-weight: bold;
-}
+
 
 footer {  
   margin-top: 30px;
   font-size: 0.9em;
 }
+
 .back-to-top {
   display: inline-block;
   margin-top: 10px;
   color: @headings;
   text-decoration: none;
   font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
-.back-to-top:hover {
-  text-decoration: underline;
-}
+
+
 @media (max-width: 992px) {
+
   h1 {
     font-size: 2.2em;
   }
@@ -169,11 +209,6 @@ footer {
     font-size: 1.4em;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 12px;
-  }
-
   p {
     max-width: 90%;
     font-size: 1em;
@@ -183,80 +218,85 @@ footer {
     font-size: 0.95em;
     padding: 8px 18px;
   }
+
+
+  .menu-toggle {
+    display: inline-block;
+  }
 }
 
 
-/* Phone Styles (≈600px and below) */
 @media (max-width: 600px) {
-  /* Hamburger button with gradient behind it */
-  .menu-toggle {
-    display: inline-block;        /* keeps it only as wide as content */
-    margin-bottom: 10px;
-    padding: 10px 15px;
-    border-radius: 12px;
-    background: linear-gradient(to right, @startColor, @endColor); /* behind button only */
-    color: @button-text;
-    font-size: 2em;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-    transition: background 0.3s ease;
 
-    &:hover {
-      background: linear-gradient(to right, @endColor, @startColor);
-    }
-  }
-
-  /* Menu items hidden by default */
-  nav ul {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background: none; /* no background when closed */
-    padding: 0;
-    margin-top: 10px; /* add spacing from button */
-    border-radius: 12px;
-    width: auto;      /* don't stretch full width */
-  }
-
-  /* Menu appears when open */
-  nav ul.open {
-    display: flex;
-    background: linear-gradient(to right, @startColor, @endColor); /* optional */
-    padding: 15px;
-    width: auto;      /* menu only as wide as content */
-  }
-
-
-  /* Body adjustments */
   body {
     margin: 15px;
     text-align: left;
   }
 
-  /* Headings */
   h1 {
     font-size: 1.9em;
     text-align: center;
   }
 
-  /* Breadcrumb */
-  .breadcrumb {
-    text-align: left;
-    font-size: 0.9em;
-  }
-
-  /* Paragraphs */
   p {
     max-width: 100%;
     font-size: 0.95em;
   }
 
-  /* Button */
   .btn-preprocessor {
     width: 100%;
     padding: 12px 0;
     font-size: 1em;
   }
 
+  .menu-toggle {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: none;
+    font-size: 2em;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(to right, @startColor, @endColor);
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+    right: 0;
+    list-style-type: none;
+    top: 100%;
+    z-index: 1;;
+  }
+
+  nav ul.open {
+    display: flex;
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+@media (min-width: 993px) {
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  nav ul {
+    display: none;             
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(to right, @startColor, @endColor);
+    padding: 15px;
+    border-radius: 12px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
 }

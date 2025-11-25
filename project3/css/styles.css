@@ -7,7 +7,7 @@ body {
 }
 p {
   max-width: 70ch;
-  line-break: 1.6;
+  line-height: 1.6;
   margin: 0 auto;
   padding-bottom: 15px;
   text-align: justify;
@@ -157,71 +157,42 @@ footer {
     padding: 8px 18px;
   }
 }
-/* Phone Styles (≈600px and below) */
+
 @media (max-width: 600px) {
-  /* Hamburger button with gradient behind it */
   .menu-toggle {
-    display: inline-block;
-    /* keeps it only as wide as content */
+    display: block;
     margin-bottom: 10px;
-    padding: 10px 15px;
-    border-radius: 12px;
-    background: linear-gradient(to right, #a9d6e5, #00b4d8);
-    /* behind button only */
-    color: #001233;
-    font-size: 2em;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-    transition: background 0.3s ease;
   }
-  .menu-toggle:hover {
-    background: linear-gradient(to right, #00b4d8, #a9d6e5);
-  }
-  /* Menu items hidden by default */
   nav ul {
     display: none;
+
     flex-direction: column;
     gap: 10px;
-    background: none;
-    /* no background when closed */
-    padding: 0;
-    margin-top: 10px;
-    /* add spacing from button */
+
+    background: linear-gradient(to right, #a9d6e5, #00b4d8);
+    padding: 15px;
     border-radius: 12px;
-    width: auto;
-    /* don't stretch full width */
   }
-  /* Menu appears when open */
+
   nav ul.open {
     display: flex;
-    background: linear-gradient(to right, #a9d6e5, #00b4d8);
-    /* optional */
-    padding: 15px;
-    width: auto;
-    /* menu only as wide as content */
   }
-  /* Body adjustments */
   body {
     margin: 15px;
     text-align: left;
   }
-  /* Headings */
   h1 {
     font-size: 1.9em;
     text-align: center;
   }
-  /* Breadcrumb */
   .breadcrumb {
     text-align: left;
     font-size: 0.9em;
   }
-  /* Paragraphs */
   p {
     max-width: 100%;
     font-size: 0.95em;
   }
-  /* Button */
   .btn-preprocessor {
     width: 100%;
     padding: 12px 0;
