@@ -1,0 +1,124 @@
+@background-color: #dad7cd;
+@primary-color: #1b4332;
+@soft-pink: #ff8fa3;
+@faded-pink: #c9ada7;
+@strong-green: #c9184a;
+@soft-white: #eaf2d7;
+@soft-green: #a3b18a;
+
+* {
+    background-color: @background-color;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+header {
+    border-bottom: 2px solid #ccc;
+    background-color: @primary-color;
+    color: @soft-white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    * {
+        background-color: transparent;
+    }
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: @soft-white;
+}
+
+.hero {
+    background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 0;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    background: transparent;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-top: 10px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    background: transparent;
+}
+
+section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.gallery div {
+    border: 2px solid #222;
+    height: 160px;
+}
+
+.explore-btn {
+    margin-top: 30px;
+    padding: 10px 24px;
+    background: #222;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+footer {
+    border-top: 2px solid #ccc;
+    padding: 20px;
+    background-color: @soft-green;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    * {
+        background-color: transparent;
+    }
+}
+
+.footer-links {
+    line-height: 1.8;
+    background: transparent;
+
+}
+
+.bottom-bar {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
