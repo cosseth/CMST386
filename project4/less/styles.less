@@ -5,9 +5,13 @@
 @strong-green: #c9184a;
 @soft-white: #eaf2d7;
 @soft-green: #a3b18a;
+@dark-green: #081c15;
+@light-gold-color: #fed57c;
+@font-family: "Open Sans", sans-serif;
 
 * {
     background-color: @background-color;
+    font-family: @font-family;
 }
 body {
     margin: 0;
@@ -32,6 +36,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: 40px;
 }
 
 .nav-links {
@@ -42,29 +47,37 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: @soft-white;
+    color: @light-gold-color
 }
 
 .hero {
-    background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80");
+    background-image: url("../imgs/background-image-adriana.jpg");
     background-size: cover;
     background-position: center;
     padding: 120px 20px;
     text-align: center;
-    color: white;
+    color: @dark-green;
 }
 
 .hero h1 {
     font-size: 42px;
     margin: 0;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    text-shadow:
+        0 0 8px rgba(255,255,255,1),
+        0 0 20px rgba(255,255,255,0.9),
+        0 0 40px rgba(255,255,255,0.8);
     background: transparent;
 }
 
 .hero p {
     font-size: 22px;
+    font-weight: bold;
     margin-top: 10px;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    text-shadow:
+        0 0 8px rgba(255,255,255,1),
+        0 0 20px rgba(255,255,255,0.9),
+        0 0 40px rgba(255,255,255,0.8);
     background: transparent;
 }
 
@@ -72,6 +85,7 @@ section {
     text-align: center;
     padding: 40px 20px;
 }
+
 
 .gallery {
     display: grid;

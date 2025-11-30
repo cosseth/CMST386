@@ -1,5 +1,6 @@
 * {
   background-color: #dad7cd;
+  font-family: "Open Sans", sans-serif;
 }
 body {
   margin: 0;
@@ -22,6 +23,7 @@ header * {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 40px;
 }
 .nav-links {
   display: flex;
@@ -30,26 +32,28 @@ header * {
 }
 .nav-links a {
   text-decoration: none;
-  color: #eaf2d7;
+  color: #fed57c;
 }
 .hero {
-  background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80");
+  background-image: url("../imgs/background-image-adriana.jpg");
   background-size: cover;
   background-position: center;
   padding: 120px 20px;
   text-align: center;
-  color: white;
+  color: #081c15;
 }
 .hero h1 {
   font-size: 42px;
   margin: 0;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 8px #ffffff, 0 0 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.8);
   background: transparent;
 }
 .hero p {
   font-size: 22px;
+  font-weight: bold;
   margin-top: 10px;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  text-shadow: 0 0 8px #ffffff, 0 0 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.8);
   background: transparent;
 }
 section {
