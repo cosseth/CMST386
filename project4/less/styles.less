@@ -2,12 +2,15 @@
 @primary-color: #1b4332;
 @soft-pink: #ff8fa3;
 @faded-pink: #c9ada7;
-@strong-green: #c9184a;
+@strong-red: #780000;
 @soft-white: #eaf2d7;
 @soft-green: #a3b18a;
 @dark-green: #081c15;
 @light-gold-color: #fed57c;
 @font-family: "Open Sans", sans-serif;
+@gap: 20px;
+@maxWidth: 1000px;
+@shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
 * {
     background-color: @background-color;
@@ -85,21 +88,49 @@ section {
     text-align: center;
     padding: 40px 20px;
 }
-
+.intro-section-signature {
+    h1 {
+        color: @strong-red;
+        font-weight: bold;
+        font-size: 36px;
+    }
+    p {
+        font-style: italic;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: @gap;
+  max-width: @maxWidth;
+  margin: 30px auto;
+
+  figure {
+    margin: 0;
+    box-shadow: @shadow;   // adds shadow
+    border-radius: 6px;    // optional: smooth corners
+    overflow: hidden;      // ensures shadow + image stay neat
+
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 9;   // rectangle shape
+      object-fit: cover;      // crops neatly without stretching
+      display: block;         // removes inline spacing issues
+    }
+    figcaption {
+      color: lighten(#000, 50%);   // caption text color
+      padding: 10px;  
+      font-weight: bold;
+      font-style: italic;  
+      text-align: center;      // centers caption
+      font-size: 0.95em;       // slightly smaller, neat look
+    }
+  }
 }
 
-.gallery div {
-    border: 2px solid #222;
-    height: 160px;
-}
 
 .explore-btn {
     margin-top: 30px;
