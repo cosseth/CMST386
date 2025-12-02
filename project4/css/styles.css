@@ -14,7 +14,6 @@ header {
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  /* THIS stacks logo on top, menu below */
   justify-content: center;
   align-items: center;
 }
@@ -23,7 +22,6 @@ header * {
 }
 .logo-section {
   margin-bottom: 10px;
-  /* space between logo and menu */
 }
 .nav-links {
   display: flex;
@@ -110,7 +108,6 @@ section {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  /* polish */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
@@ -132,8 +129,6 @@ footer {
   gap: 200px;
   font-size: 20px;
   flex-wrap: wrap;
-  /* Tablet: 2 columns per row */
-  /* Mobile: 1 column per row */
 }
 footer * {
   background-color: transparent;
@@ -227,7 +222,19 @@ footer p {
 }
 .bottom-bar {
   text-align: center;
-  margin-top: 5px;
+  padding: 15px 10px;
+  margin-top: 0;
   font-size: 12px;
-  padding-bottom: 20px;
+  color: rgba(234, 242, 215, 0.8);
+  border-top: 2px solid rgba(234, 242, 215, 0.2);
+  letter-spacing: 0.5px;
+  background-color: #020806;
+  line-height: 1.5;
+}
+.bottom-bar * {
+  background-color: transparent;
+}
+.bottom-bar span#current-date-time {
+  font-weight: bold;
+  color: #fed57c;
 }

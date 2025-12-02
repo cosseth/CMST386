@@ -28,7 +28,7 @@ header {
     color: @soft-white;
     padding: 10px 20px;
     display: flex;
-    flex-direction: column;   /* THIS stacks logo on top, menu below */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
 
@@ -38,7 +38,7 @@ header {
 }
 
 .logo-section {
-    margin-bottom: 10px; /* space between logo and menu */
+    margin-bottom: 10px; 
 }
 
 .nav-links {
@@ -110,23 +110,23 @@ section {
 
   figure {
     margin: 0;
-    box-shadow: @shadow;   // adds shadow
-    border-radius: 6px;    // optional: smooth corners
-    overflow: hidden;      // ensures shadow + image stay neat
+    box-shadow: @shadow;   
+    border-radius: 6px;   
+    overflow: hidden; 
 
     img {
       width: 100%;
-      aspect-ratio: 16 / 9;   // rectangle shape
-      object-fit: cover;      // crops neatly without stretching
-      display: block;         // removes inline spacing issues
+      aspect-ratio: 16 / 9; 
+      object-fit: cover;     
+      display: block;      
     }
     figcaption {
-      color: lighten(#000, 50%);   // caption text color
+      color: lighten(#000, 50%);  
       padding: 10px;  
       font-weight: bold;
       font-style: italic;  
-      text-align: center;      // centers caption
-      font-size: 0.95em;       // slightly smaller, neat look
+      text-align: center;  
+      font-size: 0.95em;    
     }
   }
 }
@@ -143,8 +143,6 @@ section {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.5px;
-
-    /* polish */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 
@@ -165,8 +163,8 @@ footer {
     padding: 50px 40px;
     background-color: @dark-green;
     display: flex;
-    justify-content: center;   // centers all columns
-    gap: 200px;                 // very tight spacing
+    justify-content: center;  
+    gap: 200px;    
     font-size: 20px;
     flex-wrap: wrap;
 
@@ -182,16 +180,16 @@ footer {
     }
 
     .left-column {
-        width: 160px;           // fixed width for left
+        width: 160px; 
     }
 
     .middle-column {
         text-align: center;
-        flex: 0 1 120px;        // slightly flexible
+        flex: 0 1 120px;
     }
 
     .right-column {
-        width: 160px;           // fixed width for right
+        width: 160px;
     }
 
     h4 {
@@ -251,7 +249,7 @@ footer {
         font-size: 18px;
     }
 
-    /* Tablet: 2 columns per row */
+
     @media (max-width: 900px) {
         justify-content: center;
         gap: 15px;
@@ -261,12 +259,11 @@ footer {
             text-align: center;
 
             &.middle-column {
-                order: -1; // Follow Us first if desired
+                order: -1; 
             }
         }
     }
 
-    /* Mobile: 1 column per row */
     @media (max-width: 600px) {
         flex-direction: column;
         gap: 25px;
@@ -280,7 +277,20 @@ footer {
 
 .bottom-bar {
     text-align: center;
-    margin-top: 5px;
+    padding: 15px 10px;
+    margin-top: 0;
     font-size: 12px;
-    padding-bottom: 20px;
+    color: fade(@soft-white, 80%);
+    border-top: 2px solid fade(@soft-white, 20%);
+    letter-spacing: 0.5px;
+    background-color: darken(@dark-green, 5%);
+    line-height: 1.5;
+    * {
+        background-color: transparent;
+    }
+
+    span#current-date-time {
+        font-weight: bold;
+        color: @light-gold-color;
+    }
 }
