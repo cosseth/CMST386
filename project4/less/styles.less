@@ -23,23 +23,22 @@ body {
 }
 
 header {
-    border-bottom: 2px solid #ccc;
+    border-bottom: 4px solid @soft-green;
     background-color: @primary-color;
     color: @soft-white;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;   /* THIS stacks logo on top, menu below */
+    justify-content: center;
     align-items: center;
+
     * {
         background-color: transparent;
     }
 }
 
 .logo-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 40px;
+    margin-bottom: 10px; /* space between logo and menu */
 }
 
 .nav-links {
@@ -47,9 +46,9 @@ header {
     gap: 30px;
     font-weight: bold;
 }
-
 .nav-links a {
     text-decoration: none;
+    font-size: 20px;
     color: @light-gold-color
 }
 
@@ -60,6 +59,7 @@ header {
     padding: 120px 20px;
     text-align: center;
     color: @dark-green;
+    border-bottom: 4px solid @soft-green;
 }
 
 .hero h1 {
@@ -161,21 +161,121 @@ section {
 }
 
 footer {
-    border-top: 2px solid #ccc;
-    padding: 20px;
-    background-color: @soft-green;
+    border-top: 1px solid fade(@soft-white, 20%);
+    padding: 50px 40px;
+    background-color: @dark-green;
     display: flex;
-    justify-content: space-between;
-    font-size: 14px;
+    justify-content: center;   // centers all columns
+    gap: 200px;                 // very tight spacing
+    font-size: 20px;
+    flex-wrap: wrap;
+
     * {
         background-color: transparent;
+        color: @soft-white;
     }
-}
 
-.footer-links {
-    line-height: 1.8;
-    background: transparent;
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
+    .left-column {
+        width: 160px;           // fixed width for left
+    }
+
+    .middle-column {
+        text-align: center;
+        flex: 0 1 120px;        // slightly flexible
+    }
+
+    .right-column {
+        width: 160px;           // fixed width for right
+    }
+
+    h4 {
+        margin-bottom: 12px;
+        font-size: 20px;
+        font-weight: 600;
+        color: @light-gold-color;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 6px 0;
+
+            a {
+                text-decoration: none;
+                font-size: 18px;
+                opacity: 0.85;
+                transition: 0.25s ease;
+
+                &:hover {
+                    opacity: 1;
+                    color: @light-gold-color;
+                    padding-left: 4px;
+                }
+            }
+        }
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 8px;
+
+        .social-icon i {
+            font-size: 24px;
+            opacity: 0.85;
+            transition: 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+                transform: translateY(-3px);
+                color: @light-gold-color;
+            }
+        }
+    }
+
+    p {
+        margin: 6px 0;
+        opacity: 0.9;
+        font-size: 18px;
+    }
+
+    /* Tablet: 2 columns per row */
+    @media (max-width: 900px) {
+        justify-content: center;
+        gap: 15px;
+
+        .footer-column {
+            flex: 1 1 45%;
+            text-align: center;
+
+            &.middle-column {
+                order: -1; // Follow Us first if desired
+            }
+        }
+    }
+
+    /* Mobile: 1 column per row */
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 25px;
+
+        .footer-column {
+            flex: 1 1 100%;
+            text-align: center;
+        }
+    }
 }
 
 .bottom-bar {
