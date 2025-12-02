@@ -163,8 +163,8 @@ footer {
     padding: 50px 40px;
     background-color: @dark-green;
     display: flex;
-    justify-content: center;  
-    gap: 200px;    
+    justify-content: center;
+    gap: 200px;
     font-size: 20px;
     flex-wrap: wrap;
 
@@ -177,19 +177,56 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        font-size: 24px;
+
+        p i {
+            color: @light-gold-color !important;
+            margin-right: 6px;
+            vertical-align: middle;
+            font-size: 24px;
+            &:hover {
+                opacity: 1;
+                color: @light-gold-color;
+                transform: translateY(-3px);
+            }
+        }
+
+        a {
+            color: @soft-white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+                color: @light-gold-color;
+                transform: translateY(-3px);
+            }
+        }
     }
 
-    .left-column {
-        width: 160px; 
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 8px;
+
+        .social-icon i {
+            font-size: 24px;
+            opacity: 0.85;
+            transition: 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+                transform: translateY(-3px);
+                color: @light-gold-color;
+            }
+        }
     }
 
-    .middle-column {
-        text-align: center;
-        flex: 0 1 120px;
-    }
-
-    .right-column {
-        width: 160px;
+    p {
+        margin: 6px 0;
+        opacity: 0.9;
+        font-size: 18px;
     }
 
     h4 {
@@ -224,32 +261,6 @@ footer {
         }
     }
 
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-        margin-top: 8px;
-
-        .social-icon i {
-            font-size: 24px;
-            opacity: 0.85;
-            transition: 0.3s ease;
-
-            &:hover {
-                opacity: 1;
-                transform: translateY(-3px);
-                color: @light-gold-color;
-            }
-        }
-    }
-
-    p {
-        margin: 6px 0;
-        opacity: 0.9;
-        font-size: 18px;
-    }
-
-
     @media (max-width: 900px) {
         justify-content: center;
         gap: 15px;
@@ -259,7 +270,7 @@ footer {
             text-align: center;
 
             &.middle-column {
-                order: -1; 
+                order: -1;
             }
         }
     }
@@ -274,6 +285,7 @@ footer {
         }
     }
 }
+
 
 .bottom-bar {
     text-align: center;
