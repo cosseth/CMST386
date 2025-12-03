@@ -42,6 +42,9 @@ header * {
   color: #081c15;
   border-bottom: 4px solid #a3b18a;
 }
+.about-title {
+  color: #780000;
+}
 .hero h1 {
   font-size: 42px;
   margin: 0;
@@ -58,7 +61,7 @@ header * {
 }
 section {
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px 20px;
 }
 .intro-section-signature {
   margin: 0px 50px;
@@ -146,14 +149,6 @@ section {
 .explore-btn:active {
   transform: translateY(0);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-}
-.section-separator {
-  width: 10%;
-  max-width: auto;
-  height: 2px;
-  background-color: #a3b18a;
-  margin: 60px auto;
-  border-radius: 1px;
 }
 footer {
   border-top: 1px solid rgba(234, 242, 215, 0.2);
@@ -271,7 +266,7 @@ footer ul li a:hover {
   display: flex;
   align-items: center;
   gap: 40px;
-  padding: 60px 20px;
+  padding: 10px 20px;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -302,7 +297,7 @@ footer ul li a:hover {
   color: #2d2d2d;
 }
 .about-me .about-text p {
-  font-size: 1rem;
+  font-size: 17px;
   line-height: 1.7;
   margin: 20px;
   margin-bottom: 15px;
@@ -329,7 +324,7 @@ footer ul li a:hover {
   margin-bottom: 20px;
 }
 .client-love p {
-  font-size: 1rem;
+  font-size: 17px;
   color: #4a4a4a;
   line-height: 1.6;
   max-width: 700px;
