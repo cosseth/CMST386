@@ -147,6 +147,14 @@ section {
   transform: translateY(0);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
+.section-separator {
+  width: 10%;
+  max-width: auto;
+  height: 2px;
+  background-color: #a3b18a;
+  margin: 60px auto;
+  border-radius: 1px;
+}
 footer {
   border-top: 1px solid rgba(234, 242, 215, 0.2);
   padding: 50px 40px;
@@ -257,6 +265,105 @@ footer ul li a:hover {
   footer .footer-column {
     flex: 1 1 100%;
     text-align: center;
+  }
+}
+.about-me {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  font-family: 'Open Sans', sans-serif;
+}
+.about-me .about-photo {
+  flex: 1;
+  min-width: 280px;
+}
+.about-me .about-photo img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.about-me .about-photo img:hover {
+  transform: scale(1.03);
+}
+.about-me .about-text {
+  flex: 2;
+  min-width: 280px;
+}
+.about-me .about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+}
+.about-me .about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 20px;
+  margin-bottom: 15px;
+  color: #4a4a4a;
+}
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-me .about-text {
+    margin-top: 20px;
+  }
+}
+.client-love {
+  padding: 20px 20px;
+  background-color: none;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+.client-love h2 {
+  font-size: 2rem;
+  color: #2d2d2d;
+  margin-bottom: 20px;
+}
+.client-love p {
+  font-size: 1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+.client-love .screenshots {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.client-love .screenshots figure {
+  width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.client-love .screenshots figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+.client-love .screenshots figure img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .client-love .screenshots {
+    flex-direction: column;
+    align-items: center;
+  }
+  .client-love .screenshots figure {
+    width: 80%;
   }
 }
 .bottom-bar {
