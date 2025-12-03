@@ -60,6 +60,9 @@ section {
   text-align: center;
   padding: 40px 20px;
 }
+.intro-section-signature {
+  margin: 0px 50px;
+}
 .intro-section-signature h1 {
   color: #780000;
   font-weight: bold;
@@ -68,6 +71,30 @@ section {
 .intro-section-signature p {
   font-style: italic;
   font-size: 20px;
+  font-weight: bold;
+}
+.intro-section-signature ul.breadcrumb {
+  padding: 10px 20px;
+  list-style: none;
+  background-color: none;
+  text-align: left;
+  border-radius: 12px;
+  margin: 0;
+}
+.intro-section-signature ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+.intro-section-signature ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: #081c15;
+  content: "/\00a0";
+}
+.intro-section-signature ul.breadcrumb li a {
+  color: #081c15;
+  text-decoration: none;
+}
+.intro-section-signature ul.breadcrumb li a:hover {
   font-weight: bold;
 }
 .gallery {
@@ -138,16 +165,49 @@ footer .footer-column {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-size: 24px;
 }
-footer .left-column {
-  width: 160px;
+footer .footer-column p i {
+  color: #fed57c !important;
+  margin-right: 6px;
+  vertical-align: middle;
+  font-size: 24px;
 }
-footer .middle-column {
-  text-align: center;
-  flex: 0 1 120px;
+footer .footer-column p i:hover {
+  opacity: 1;
+  color: #fed57c;
+  transform: translateY(-3px);
 }
-footer .right-column {
-  width: 160px;
+footer .footer-column a {
+  color: #eaf2d7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer .footer-column a:hover {
+  opacity: 1;
+  color: #fed57c;
+  transform: translateY(-3px);
+}
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+footer .social-links .social-icon i {
+  font-size: 24px;
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+footer .social-links .social-icon i:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  color: #fed57c;
+}
+footer p {
+  margin: 6px 0;
+  opacity: 0.9;
+  font-size: 18px;
 }
 footer h4 {
   margin-bottom: 12px;
@@ -175,27 +235,6 @@ footer ul li a:hover {
   opacity: 1;
   color: #fed57c;
   padding-left: 4px;
-}
-footer .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 8px;
-}
-footer .social-links .social-icon i {
-  font-size: 24px;
-  opacity: 0.85;
-  transition: 0.3s ease;
-}
-footer .social-links .social-icon i:hover {
-  opacity: 1;
-  transform: translateY(-3px);
-  color: #fed57c;
-}
-footer p {
-  margin: 6px 0;
-  opacity: 0.9;
-  font-size: 18px;
 }
 @media (max-width: 900px) {
   footer {

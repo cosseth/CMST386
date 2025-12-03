@@ -89,6 +89,7 @@ section {
     padding: 40px 20px;
 }
 .intro-section-signature {
+    margin: 0px 50px;
     h1 {
         color: @strong-red;
         font-weight: bold;
@@ -97,6 +98,34 @@ section {
     p {
         font-style: italic;
         font-size: 20px;
+        font-weight: bold;
+    }
+    ul.breadcrumb {
+    padding: 10px 20px;
+    list-style: none;
+    background-color: none;
+    text-align: left;
+    border-radius: 12px;
+    margin: 0;
+    }
+
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 18px;
+    }
+
+    ul.breadcrumb li+li:before {
+        padding: 8px;
+        color: @dark-green;
+        content: "/\00a0";
+    }
+
+    ul.breadcrumb li a {
+        color: @dark-green;
+        text-decoration: none;
+    }
+
+    ul.breadcrumb li a:hover {
         font-weight: bold;
     }
 }
