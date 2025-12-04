@@ -68,21 +68,22 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     }
 });
 
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-const dropdownParents = document.querySelectorAll(".has-dropdown");
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const dropdownParents = document.querySelectorAll(".has-dropdown");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("open");
-});
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    hamburger.classList.toggle("active");
+  });
 
-// Mobile dropdown taps
-dropdownParents.forEach(item => {
-  item.addEventListener("click", (e) => {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      item.classList.toggle("open");
-    }
+  dropdownParents.forEach(item => {
+    item.addEventListener("click", e => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        item.classList.toggle("open");
+      }
+    });
   });
 });
