@@ -588,19 +588,42 @@ word-break: break-word !important;
     margin: 0 auto;
     padding: 20px;
 
+    .article-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    }
+
     .blog-header {
         text-align: center;
         margin-bottom: 40px;
+        background-color: @strong-red;
+        border-radius: 20px;
+
+        .blog-header-image {
+            width: 100%;
+            max-height: 280px;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 5px;
-            color: @soft-white
+            color: @soft-white;
         }
 
         p {
             font-size: 1.1rem;
-            color: @soft-green;
+            color: @soft-white;
         }
     }
 
@@ -649,6 +672,8 @@ word-break: break-word !important;
             }
         }
     }
+
+    
 
     @media (max-width: 600px) {
         padding: 15px;
