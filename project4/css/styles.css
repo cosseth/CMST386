@@ -421,7 +421,6 @@ footer ul li a:hover {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  /* Mobile responsive */
 }
 .contact-form fieldset {
   border: 1px solid #ccc;
@@ -487,4 +486,86 @@ footer ul li a:hover {
   font-size: 0.9rem;
   margin-top: 4px;
   display: block;
+}
+.contact-intro {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  padding: 10px 20px;
+}
+.contact-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #081c15;
+}
+.contact-intro p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+.blog-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.blog-page .blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.blog-page .blog-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #eaf2d7;
+}
+.blog-page .blog-header p {
+  font-size: 1.1rem;
+  color: #a3b18a;
+}
+.blog-page .blog-article {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.blog-page .blog-article figure {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.blog-page .blog-article figure img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.blog-page .blog-article .blog-content h2 {
+  font-size: 1.8rem;
+  color: #081c15;
+}
+.blog-page .blog-article .blog-content .blog-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+.blog-page .blog-article .blog-content .blog-excerpt {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.blog-page .blog-article .blog-content .blog-full-content {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.7;
+}
+@media (max-width: 600px) {
+  .blog-page {
+    padding: 15px;
+  }
+  .blog-page .blog-header h1 {
+    font-size: 2rem;
+  }
+  .blog-page .blog-article .blog-content h2 {
+    font-size: 1.5rem;
+  }
 }
