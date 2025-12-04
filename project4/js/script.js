@@ -20,49 +20,42 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    updateDateTime(); // run immediately
-    setInterval(updateDateTime, 1000); // update every second
+    updateDateTime(); 
+    setInterval(updateDateTime, 1000); 
 });
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {
 
-    // Input references
     const name = document.getElementById("name");
     const email = document.getElementById("email");
     const message = document.getElementById("message");
 
-    // Error display elements
     const nameError = document.getElementById("nameError");
     const emailError = document.getElementById("emailError");
     const messageError = document.getElementById("messageError");
 
-    // Reset previous error messages
     nameError.textContent = "";
     emailError.textContent = "";
     messageError.textContent = "";
 
     let valid = true;
 
-    // Validate NAME
     if (name.value.trim().length < 2) {
         nameError.textContent = "Please enter your full name.";
         valid = false;
     }
 
-    // Validate EMAIL
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email.value.trim())) {
         emailError.textContent = "Please enter a valid email address.";
         valid = false;
     }
 
-    // Validate MESSAGE
     if (message.value.trim().length < 10) {
         messageError.textContent = "Message must be at least 10 characters.";
         valid = false;
     }
 
-    // Stop form submission if invalid
     if (!valid) {
         event.preventDefault();
     }
@@ -73,15 +66,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelector(".nav-links");
   const dropdownParents = document.querySelectorAll(".has-dropdown");
 
+  // Toggle main menu
   hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
     hamburger.classList.toggle("active");
   });
 
+  // Toggle dropdowns on mobile
   dropdownParents.forEach(item => {
     item.addEventListener("click", e => {
       if (window.innerWidth <= 768) {
-        e.preventDefault();
+        e.preventDefault(); // prevent default link
         item.classList.toggle("open");
       }
     });

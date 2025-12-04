@@ -40,10 +40,10 @@ header {
   margin-bottom: 10px;
 }
 
+/* NAV LINKS */
 .nav-links {
   ul {
     display: flex;
-    align-items: center;
     gap: 30px;
     list-style: none;
     padding: 0;
@@ -56,52 +56,31 @@ header {
     color: @light-gold-color;
     font-weight: bold;
   }
-}
 
-/* ----- Dropdown ----- */
-.nav-item {
-  position: relative;
+  /* DROPDOWNS */
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: @primary-color;
+    padding: 10px 0;
+    border-radius: 8px;
+    list-style: none;
 
-  &.has-dropdown {
-    cursor: pointer;
-
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: @primary-color;
-      padding: 10px 0;
-      border: 1px solid @soft-green;
-      border-radius: 8px;
-      min-width: 180px;
-      list-style: none;
-      z-index: 20;
-
-      li {
-        padding: 8px 15px;
-
-        a {
-          font-size: 16px;
-          font-weight: normal;
-          color: @light-gold-color;
-
-          &:hover {
-            color: lighten(@light-gold-color, 15%);
-          }
-        }
-      }
+    li a {
+      padding: 8px 15px;
+      font-size: 16px;
+      color: @light-gold-color;
     }
+  }
 
-    &:hover .dropdown {
-      display: block;
-    }
+  .has-dropdown:hover .dropdown {
+    display: block;
   }
 }
 
-/* ============================
-   HAMBURGER MENU BUTTON
-============================ */
+/* HAMBURGER */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -119,7 +98,6 @@ header {
   }
 }
 
-/* Animate hamburger when active */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 6px);
 }
@@ -130,44 +108,34 @@ header {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ============================
-   MOBILE NAVIGATION
-============================ */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-
-  /* Show hamburger */
   .hamburger {
     display: flex;
   }
 
-  /* Hide desktop nav initially */
   .nav-links {
-    width: 100%;
     display: none;
+    width: 100%;
 
     ul {
       flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      text-align: center;
-      padding: 20px 0;
       background: darken(@primary-color, 2%);
       border-top: 2px solid @soft-green;
+    }
 
-      li {
-        width: 100%;
-      }
+    li {
+      width: 100%;
+      text-align: center;
 
       a {
-        width: 100%;
+        padding: 12px 0;
         display: block;
-        padding: 10px 0;
         font-size: 18px;
       }
     }
   }
 
-  /* Slide-down animation */
   .nav-links.open {
     display: block;
     animation: slideDown 0.3s ease forwards;
@@ -178,29 +146,19 @@ header {
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* Mobile dropdowns */
-  .nav-item {
-    width: 100%;
+  /* MOBILE DROPDOWNS */
+  .nav-item.has-dropdown .dropdown {
+    position: static;
+    border: none;
+    background: darken(@primary-color, 4%);
+    display: none;
+  }
 
-    .dropdown {
-      display: none;
-      position: static;
-      border: none;
-      background: darken(@primary-color, 4%);
-      padding: 10px 0;
-
-      li a {
-        padding: 8px 0;
-        font-size: 16px;
-      }
-    }
-
-    /* Open dropdown on tap */
-    &.open .dropdown {
-      display: block;
-    }
+  .nav-item.has-dropdown.open .dropdown {
+    display: block;
   }
 }
+
 
 .hero {
     background-image: url("../imgs/background-image-adriana.jpg");
