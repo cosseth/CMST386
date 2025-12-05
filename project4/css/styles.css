@@ -136,7 +136,7 @@ section {
 .intro-section-signature ul.breadcrumb {
   padding: 10px 20px;
   list-style: none;
-  background-color: none;
+  background-color: transparent;
   text-align: left;
   border-radius: 12px;
   margin: 0;
@@ -371,7 +371,7 @@ footer ul li a:hover {
 }
 .client-love {
   padding: 20px 20px;
-  background-color: none;
+  background-color: transparent;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
