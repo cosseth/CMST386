@@ -60,25 +60,3 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         event.preventDefault();
     }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
-  const dropdownParents = document.querySelectorAll(".has-dropdown");
-
-  // Toggle main menu
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-    hamburger.classList.toggle("active");
-  });
-
-  // Toggle dropdowns on mobile
-  dropdownParents.forEach(item => {
-    item.addEventListener("click", e => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault(); // prevent default link
-        item.classList.toggle("open");
-      }
-    });
-  });
-});
