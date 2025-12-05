@@ -18,19 +18,45 @@
   <script src="js/script.js"></script>
 </head>
 <body>
-    <header>
-    <div class="logo-section">
-        <img src="imgs/horizontal-logo-adriana-gold-smaller.png" alt="Adriana's Flowershop Logo">
-    </div>
+<header>
+  <div class="logo-section">
+    <img src="imgs/horizontal-logo-adriana-gold-smaller.png" alt="Adriana's Flowershop Logo">
+  </div>
 
-    <nav class="nav-links">
+  <nav class="nav-links">
+    <ul>
+      <li class="nav-item">
         <a href="#">Home</a>
-        <a href="#">About ▼</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="about.html">Our Story</a>
+      </li>
+
+      <li class="nav-item has-dropdown">
         <a href="#">Collections ▼</a>
+        <ul class="dropdown">
+          <li><a href="collection-best-sellers.html">Best Sellers</a></li>
+          <li><a href="collection-romance.html">Romance</a></li>
+          <li><a href="collection-birthday.html">Birthday</a></li>
+          <li><a href="collection-mothers.html">Mother’s</a></li>
+          <li><a href="collection-miscellaneous.html">Miscellaneous</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item has-dropdown">
         <a href="#">Help ▼</a>
-        <span>Hyattsville, MD</span>
-    </nav>
-    </header>
+        <ul class="dropdown">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+        <script async src="https://cse.google.com/cse.js?cx=d79ded597ac7f4d4f">
+  </script>
+  <div class="gcse-search"></div>
+</header>
     <section>
         <h1>About Our Flower Boutique</h1>
 
@@ -118,11 +144,11 @@
     </div>
   </footer>
 
-  <section class="bottom-bar">
+  <div class="bottom-bar">
     <span id="current-date-time"></span> <br>
     © 2025 All Rights Reserved. Flower Boutique by Adriana Alvarez.
     <a href="privacy-policy.html" class="privacy-link">Privacy Policy</a>
-  </section>
+  </div>
 
 </body>
 </html>
